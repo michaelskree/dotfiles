@@ -6,7 +6,7 @@ call vundle#begin()
 
 " Installed plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'benekastah/neomake'
 Plugin 'joonty/vdebug'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
@@ -70,16 +70,11 @@ let g:indent_guides_enable_on_vim_startup=1
 hi IndentGuidesOdd ctermbg=0
 hi IndentGuidesEven ctermbg=236
 
-" syntastic
-set statusline+=%warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_python_python_exec = '/usr/bin/python3'
-let g:syntastic_javascript_checkers = ['jshint']
-let g:sytastic_php_checkers = ['php', 'phpmd', 'phpcs']
+" neomake
+autocmd! BufWritePost,BufRead * Neomake
+let g:neomake_warning_sign={'text': 'W', 'texthl': 'WarningMsg'}
+let g:neomake_error_sign={'text': 'E', 'texthl': 'ErrorMsg'}
+let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
 " fugative
 " git grep the current word under the cursor
