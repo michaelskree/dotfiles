@@ -43,6 +43,8 @@ set scrolloff=5
 " searching
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 hi Search ctermbg=110 ctermfg=28
 
 " quickly exit insert mode
