@@ -38,6 +38,7 @@ set ruler
 set laststatus=2
 set smartindent
 set backspace=2
+set scrolloff=5
 
 " searching
 set hlsearch
