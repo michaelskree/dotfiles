@@ -76,7 +76,10 @@ let g:neomake_warning_sign={'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign={'text': 'E', 'texthl': 'ErrorMsg'}
 let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
-" fugative
+" fugitive
+nnoremap <Leader>s :Gstatus<CR>
+nnoremap <Leader>d :Gdiff<CR>
+nnoremap <Leader>c :Gcommit<CR>
 " git grep the current word under the cursor
 nnoremap <Leader>g :Ggrep <cword><CR>
 " automatically open quickfix window after :Ggrep
