@@ -56,9 +56,6 @@ noremap <c-k> <c-w>k
 noremap <c-h> <c-w>h
 noremap <c-l> <c-w>l
 
-" jump to tag
-nnoremap <c-u> yiw:tag <c-r>"<cr>
-
 " commit messages
 autocmd FileType gitcommit set spell textwidth=70
 
