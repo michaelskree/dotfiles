@@ -79,7 +79,7 @@ let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
 " fugative
 " git grep the current word under the cursor
-nnoremap <Leader>g viwy:Ggrep <C-r>"<CR>
+nnoremap <Leader>g :Ggrep <cword><CR>
 " automatically open quickfix window after :Ggrep
 autocmd QuickFixCmdPost *grep* cwindow
 
