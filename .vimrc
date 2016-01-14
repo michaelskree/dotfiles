@@ -81,6 +81,7 @@ let g:neomake_php_phpcs_args_standard="phpcs.xml"
 nnoremap <Leader>s :Gstatus<CR>
 nnoremap <Leader>d :Gdiff<CR>
 nnoremap <Leader>c :Gcommit<CR>
+nnoremap <Leader>b :Gblame<CR>
 " git grep the current word under the cursor
 nnoremap <Leader>g :Ggrep <cword><CR>
 " automatically open quickfix window after :Ggrep
