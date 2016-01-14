@@ -31,6 +31,12 @@ set softtabstop=4
 " color stuff
 syntax enable
 set background=dark
+
+" display correct colors on mac
+if has('mac')
+    let g:solarized_termtrans=1
+endif
+
 colorscheme solarized
 
 " other simple options
