@@ -40,6 +40,8 @@ set laststatus=2
 set smartindent
 set backspace=2
 set scrolloff=5
+set wildmenu
+set wildignore=*.swp
 
 " searching
 set hlsearch
