@@ -100,6 +100,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+" vdebug
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+let g:vdebug_options['break_on_open'] = 0
+
 " Add any cscope database in the current directory
 if filereadable("cscope.out")
     cs add cscope.out
