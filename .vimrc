@@ -105,6 +105,7 @@ if !exists('g:vdebug_options')
     let g:vdebug_options = {}
 endif
 let g:vdebug_options['break_on_open'] = 0
+let g:vdebug_options['continuous_mode'] = 1
 
 " Add any cscope database in the current directory
 if filereadable("cscope.out")
