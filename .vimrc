@@ -48,7 +48,7 @@ set smartindent
 set backspace=2
 set scrolloff=5
 set wildmenu
-set wildignore=*.swp
+set wildignore=*.swp,*.o
 set splitbelow
 
 " searching
