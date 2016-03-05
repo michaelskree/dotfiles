@@ -112,3 +112,8 @@ let g:vdebug_options['continuous_mode'] = 1
 if filereadable("cscope.out")
     cs add cscope.out
 endif
+
+" local config
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
