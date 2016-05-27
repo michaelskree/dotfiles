@@ -51,6 +51,7 @@ set scrolloff=5
 set wildmenu
 set wildignore=*.swp,*.o
 set splitbelow
+set colorcolumn=80
 
 " searching
 set hlsearch
