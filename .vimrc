@@ -107,8 +107,12 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 if !exists('g:vdebug_options')
     let g:vdebug_options = {}
 endif
+if !exists('g:vdebug_features')
+    let g:vdebug_features = {}
+endif
 let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options['continuous_mode'] = 1
+let g:vdebug_features['max_children'] = 128
 
 " Add any cscope database in the current directory
 if filereadable("cscope.out")
