@@ -71,7 +71,7 @@ noremap <c-h> <c-w>h
 noremap <c-l> <c-w>l
 
 " commit messages
-autocmd FileType gitcommit set spell textwidth=70
+autocmd FileType gitcommit set spell textwidth=70 colorcolumn=70
 
 " paste toggle
 set pastetoggle=<Leader>p
