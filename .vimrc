@@ -52,6 +52,7 @@ set wildmenu
 set wildignore=*.swp,*.o
 set splitbelow
 set colorcolumn=80
+set relativenumber
 
 " searching
 set hlsearch
