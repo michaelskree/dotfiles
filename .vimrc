@@ -76,6 +76,9 @@ autocmd FileType gitcommit set spell textwidth=70 colorcolumn=70
 " paste toggle
 set pastetoggle=<Leader>p
 
+" unhighlight things
+nnoremap <Leader>h :nohl<CR>
+
 " indent guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
