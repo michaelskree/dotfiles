@@ -15,7 +15,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
