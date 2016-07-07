@@ -103,10 +103,6 @@ nnoremap <Leader>g :Ggrep <cword><CR>
 " automatically open quickfix window after :Ggrep
 autocmd QuickFixCmdPost *grep* cwindow
 
-" YouCompleteMe
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
 " vdebug
 if !exists('g:vdebug_options')
     let g:vdebug_options = {}
