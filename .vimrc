@@ -52,6 +52,7 @@ set wildignore=*.swp,*.o
 set splitbelow
 set colorcolumn=80
 set relativenumber
+set lazyredraw
 
 " searching
 set hlsearch
