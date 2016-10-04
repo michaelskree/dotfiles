@@ -54,6 +54,7 @@ set splitbelow
 set colorcolumn=80
 set relativenumber
 set lazyredraw
+set mouse=
 
 " searching
 set hlsearch
