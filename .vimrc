@@ -17,6 +17,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on
