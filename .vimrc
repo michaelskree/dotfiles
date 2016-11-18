@@ -76,6 +76,9 @@ noremap <c-l> <c-w>l
 " commit messages
 autocmd FileType gitcommit set spell textwidth=70 colorcolumn=70
 
+" quickfix window
+autocmd FileType qf setlocal nonumber norelativenumber colorcolumn=
+
 " paste toggle
 set pastetoggle=<Leader>p
 
