@@ -94,9 +94,16 @@ hi IndentGuidesOdd ctermbg=0
 hi IndentGuidesEven ctermbg=236
 
 " neomake
-autocmd! BufWritePost,BufRead * Neomake
-let g:neomake_warning_sign={'text': 'W', 'texthl': 'WarningMsg'}
-let g:neomake_error_sign={'text': 'E', 'texthl': 'ErrorMsg'}
+autocmd! BufWritePost * Neomake
+nnoremap <Leader>m :Neomake<CR>
+let g:neomake_warning_sign = {
+    \ 'text': 'W',
+    \ 'texthl': 'WarningMsg',
+    \ }
+let g:neomake_error_sign = {
+    \ 'text': 'E',
+    \ 'texthl': 'ErrorMsg',
+    \ }
 let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
 " fugitive
