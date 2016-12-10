@@ -50,6 +50,7 @@ set smartindent
 set backspace=2
 set scrolloff=5
 set wildmenu
+set wildmode=longest:full,full
 set wildignore=*.swp,*.o
 set splitbelow
 set colorcolumn=80
