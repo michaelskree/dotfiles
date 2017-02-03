@@ -16,6 +16,9 @@ export PROMPT_COMMAND='history -a'
 # Set editor
 export EDITOR=vim
 
+# Enable bash completion
+[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+
 # Source aliases
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
