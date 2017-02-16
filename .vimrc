@@ -129,6 +129,9 @@ let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options['continuous_mode'] = 1
 let g:vdebug_features['max_children'] = 128
 
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " Add any cscope database in the current directory
 if filereadable("cscope.out")
     cs add cscope.out
