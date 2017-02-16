@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Set prompt
-PS1='\e[1;37m\u@\H:\e[1;36m\w \$\e[0m '
+PS1='\[\e[1;37m\]\u@\H:\[\e[1;36m\]\w \$\[\e[0m\] '
 
 # Configure bash history
 shopt -s histappend
