@@ -1,0 +1,4 @@
+\set QUIET
+\set PROMPT1 '%[%033[1;32m%]%M:%> %n@%/%#%[%033[0m%] '
+\pset null [NULL]
+\unset QUIET
