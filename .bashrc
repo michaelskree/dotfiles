@@ -16,6 +16,9 @@ export PROMPT_COMMAND='history -a'
 # Set editor
 export EDITOR=vim
 
+# Set pager
+export PAGER='less -S'
+
 # Enable bash completion
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
