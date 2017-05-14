@@ -19,6 +19,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -134,6 +135,12 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " ctrlp
 let g:ctrlp_regexp = 1
+
+" tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+let g:tagbar_autoclose=1
+let g:tagbar_case_insensitive=1
+
 " Add any cscope database in the current directory
 if filereadable("cscope.out")
     cs add cscope.out
