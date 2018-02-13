@@ -33,6 +33,17 @@ set shiftwidth=4
 set softtabstop=4
 
 " color stuff
+function! MyHighlights() abort
+    highlight Search           ctermbg=110 ctermfg=28
+    highlight IndentGuidesOdd  ctermbg=0
+    highlight IndentGuidesEven ctermbg=236
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+augroup END
+
 syntax enable
 set background=dark
 colorscheme solarized
@@ -61,7 +72,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-hi Search ctermbg=110 ctermfg=28
 
 " quickly exit insert mode
 inoremap jk <esc>
@@ -89,8 +99,6 @@ let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_enable_on_vim_startup=1
-hi IndentGuidesOdd ctermbg=0
-hi IndentGuidesEven ctermbg=236
 
 " neomake
 autocmd! BufWritePost * Neomake
