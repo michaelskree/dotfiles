@@ -37,11 +37,14 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" indentation
+set autoindent
+filetype plugin indent on
+
 " other simple options
 set number
 set ruler
 set laststatus=2
-set smartindent
 set backspace=2
 set scrolloff=5
 set wildmenu
