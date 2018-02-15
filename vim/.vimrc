@@ -82,11 +82,11 @@ noremap <c-k> <c-w>k
 noremap <c-h> <c-w>h
 noremap <c-l> <c-w>l
 
-" commit messages
-autocmd FileType gitcommit set spell textwidth=70 colorcolumn=70
-
-" quickfix window
-autocmd FileType qf setlocal nonumber norelativenumber colorcolumn=
+augroup MyFileTypes
+    autocmd!
+    autocmd FileType gitcommit setlocal spell textwidth=70 colorcolumn=70
+    autocmd FileType qf setlocal nonumber norelativenumber colorcolumn=
+augroup END
 
 " paste toggle
 set pastetoggle=<Leader>p
