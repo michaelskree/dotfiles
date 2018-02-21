@@ -34,9 +34,14 @@ set softtabstop=4
 
 " color stuff
 function! MyHighlights() abort
-    highlight Search           ctermbg=110 ctermfg=28
-    highlight IndentGuidesOdd  ctermbg=0
-    highlight IndentGuidesEven ctermbg=236
+    highlight Search ctermbg=110 ctermfg=28
+    if &background == 'dark'
+        highlight IndentGuidesOdd  ctermbg=0
+        highlight IndentGuidesEven ctermbg=236
+    else
+        highlight IndentGuidesOdd  ctermbg=LightGray
+        highlight IndentGuidesEven ctermbg=LightGray
+    endif
 endfunction
 
 augroup MyColors
