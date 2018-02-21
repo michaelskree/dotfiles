@@ -101,7 +101,6 @@ let g:indent_guides_auto_colors=0
 let g:indent_guides_enable_on_vim_startup=1
 
 " neomake
-autocmd! BufWritePost * Neomake
 nnoremap <Leader>m :Neomake<CR>
 let g:neomake_warning_sign = {
     \ 'text': 'W',
@@ -113,6 +112,11 @@ let g:neomake_error_sign = {
     \ }
 let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
+augroup NeomakeCommands
+    autocmd!
+    autocmd BufWritePost * Neomake
+augroup END
+
 " fugitive
 nnoremap <Leader>s :Gstatus<CR>
 nnoremap <Leader>d :Gdiff<CR>
@@ -120,8 +124,12 @@ nnoremap <Leader>c :Gcommit<CR>
 nnoremap <Leader>b :Gblame<CR>
 " git grep the current word under the cursor
 nnoremap <Leader>g :Ggrep <cword><CR>
-" automatically open quickfix window after :Ggrep
-autocmd QuickFixCmdPost *grep* cwindow
+
+augroup FugitiveCommands
+    autocmd!
+    " automatically open quickfix window after :Ggrep
+    autocmd QuickFixCmdPost *grep* cwindow
+augroup END
 
 " vdebug
 if !exists('g:vdebug_options')
