@@ -26,11 +26,12 @@ filetype plugin indent on
 " leader
 let mapleader=','
 
-" configure tabs
+" configure indentation
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set autoindent
 
 " color stuff
 function! MyHighlights() abort
@@ -52,10 +53,6 @@ augroup END
 syntax enable
 set background=dark
 colorscheme solarized
-
-" indentation
-set autoindent
-filetype plugin indent on
 
 " other simple options
 set number
