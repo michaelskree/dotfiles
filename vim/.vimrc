@@ -19,6 +19,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'tommcdo/vim-lion'
 
 call vundle#end()
 filetype plugin indent on
