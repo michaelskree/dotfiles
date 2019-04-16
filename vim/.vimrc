@@ -113,7 +113,6 @@ let g:neomake_error_sign = {
     \ 'text': 'E',
     \ 'texthl': 'ErrorMsg',
     \ }
-let g:neomake_php_phpcs_args_standard="phpcs.xml"
 
 augroup NeomakeCommands
     autocmd!
