@@ -2,4 +2,7 @@
 \set PROMPT1 '%[%033[1;32m%]%M:%> %n@%/%#%x%[%033[0m%] '
 \pset null [NULL]
 \x auto
+\pset linestyle unicode
+\pset unicode_header_linestyle double
+SET application_name TO 'psql (Michael Skree)';
 \unset QUIET
