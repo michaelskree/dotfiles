@@ -88,6 +88,7 @@ augroup MyFileTypes
     autocmd!
     autocmd FileType gitcommit setlocal spell textwidth=70 colorcolumn=70
     autocmd FileType qf setlocal nonumber norelativenumber colorcolumn=
+    autocmd FileType yaml setlocal softtabstop=2 shiftwidth=2
 augroup END
 
 " paste toggle
