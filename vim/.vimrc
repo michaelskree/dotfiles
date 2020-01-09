@@ -64,6 +64,7 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore=*.swp,*.o
 set splitbelow
+set splitright
 set colorcolumn=80
 set relativenumber
 set lazyredraw
