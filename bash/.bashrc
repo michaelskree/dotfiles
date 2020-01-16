@@ -19,6 +19,9 @@ export EDITOR=vim
 # Set pager
 export PAGER='less -S'
 
+# Set LS_COLORS
+eval "$(dircolors)"
+
 # Enable bash completion
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
