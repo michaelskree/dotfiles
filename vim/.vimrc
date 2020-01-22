@@ -36,6 +36,7 @@ set autoindent
 " color stuff
 function! MyHighlights() abort
     highlight Search ctermbg=110 ctermfg=28
+    highlight NeomakeErrorSign ctermfg=5 ctermbg=0
     if &background == 'dark'
         highlight IndentGuidesOdd  ctermbg=0
         highlight IndentGuidesEven ctermbg=236
@@ -106,14 +107,6 @@ let g:indent_guides_enable_on_vim_startup=1
 
 " neomake
 nnoremap <Leader>m :Neomake<CR>
-let g:neomake_warning_sign = {
-    \ 'text': 'W',
-    \ 'texthl': 'WarningMsg',
-    \ }
-let g:neomake_error_sign = {
-    \ 'text': 'E',
-    \ 'texthl': 'ErrorMsg',
-    \ }
 
 augroup NeomakeCommands
     autocmd!
