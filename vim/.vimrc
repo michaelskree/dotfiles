@@ -77,6 +77,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+" spelling
+set spelllang=en_us
+set spellfile=~/.vim/spell/en.utf-8.add
+
 " quickly exit insert mode
 inoremap jk <esc>
 
