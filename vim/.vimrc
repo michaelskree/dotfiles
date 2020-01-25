@@ -35,7 +35,6 @@ set autoindent
 
 " color stuff
 function! MyHighlights() abort
-    highlight Search ctermbg=110 ctermfg=28
     highlight NeomakeErrorSign ctermfg=5 ctermbg=0
     if &background == 'dark'
         highlight IndentGuidesOdd  ctermbg=0
