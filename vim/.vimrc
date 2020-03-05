@@ -69,6 +69,7 @@ set colorcolumn=80
 set relativenumber
 set lazyredraw
 set mouse=
+set signcolumn=yes
 
 " searching
 set hlsearch
@@ -91,8 +92,8 @@ noremap <c-l> <c-w>l
 
 augroup MyFileTypes
     autocmd!
-    autocmd FileType gitcommit setlocal spell textwidth=70 colorcolumn=70
-    autocmd FileType qf setlocal nonumber norelativenumber colorcolumn=
+    autocmd FileType gitcommit setlocal spell textwidth=70 colorcolumn=70 signcolumn=no
+    autocmd FileType qf setlocal colorcolumn= signcolumn=no
     autocmd FileType yaml setlocal softtabstop=2 shiftwidth=2
 augroup END
 
