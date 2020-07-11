@@ -36,6 +36,7 @@ set autoindent
 " color stuff
 function! MyHighlights() abort
     highlight NeomakeErrorSign ctermfg=5 ctermbg=0
+    highlight! link SignColumn LineNr
     if &background == 'dark'
         highlight IndentGuidesOdd  ctermbg=0
         highlight IndentGuidesEven ctermbg=236
