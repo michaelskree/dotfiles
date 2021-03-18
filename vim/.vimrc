@@ -119,10 +119,10 @@ augroup NeomakeCommands
 augroup END
 
 " fugitive
-nnoremap <Leader>s :Gstatus<CR>
-nnoremap <Leader>d :Gdiff<CR>
-nnoremap <Leader>c :Gcommit<CR>
-nnoremap <Leader>b :Gblame<CR>
+nnoremap <Leader>s :Git<CR>
+nnoremap <Leader>d :Gdiffsplit<CR>
+nnoremap <Leader>c :Git commit<CR>
+nnoremap <Leader>b :Git blame<CR>
 " git grep the current word under the cursor
 nnoremap <Leader>g :Ggrep <cword><CR>
 
