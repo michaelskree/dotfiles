@@ -20,7 +20,7 @@ export EDITOR=vim
 export PAGER='less -S'
 
 # Set LS_COLORS
-hash dircolors && eval "$(dircolors)"
+hash dircolors 2> /dev/null && eval "$(dircolors)"
 
 # Enable bash completion
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
