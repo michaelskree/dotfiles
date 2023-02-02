@@ -1,0 +1,33 @@
+" plugins
+set commentary
+set surround
+
+" leader
+let mapleader=','
+
+" other simple options
+set number
+set scrolloff=5
+set relativenumber
+
+" searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" quickly exit insert mode
+inoremap jk <esc>
+
+" quick pane switching
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-h> <c-w>h
+noremap <c-l> <c-w>l
+
+" unhighlight things
+nnoremap <Leader>h :nohl<CR>
+
+" git
+map <Leader>b <Action>(Annotate)
+map <Leader>d <Action>(Compare.SameVersion)
