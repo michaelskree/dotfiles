@@ -1,28 +1,21 @@
-" Vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Installed plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'benekastah/neomake'
-Plugin 'joonty/vdebug'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-commentary'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tommcdo/vim-lion'
-Plugin 'tpope/vim-unimpaired'
-
-call vundle#end()
-filetype plugin indent on
+" plugins
+call plug#begin()
+Plug 'junegunn/vim-plug'
+Plug 'benekastah/neomake'
+Plug 'joonty/vdebug'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-jdaddy'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tommcdo/vim-lion'
+Plug 'tpope/vim-unimpaired'
+call plug#end()
 
 " leader
 let mapleader=','
