@@ -1,8 +1,6 @@
 " plugins
 call plug#begin()
 Plug 'junegunn/vim-plug'
-Plug 'benekastah/neomake'
-Plug 'joonty/vdebug'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -28,7 +26,6 @@ set autoindent
 
 " color stuff
 function! MyHighlights() abort
-    highlight NeomakeErrorSign ctermfg=5 ctermbg=0
     highlight! link SignColumn LineNr
     if &background == 'dark'
         highlight IndentGuidesOdd  ctermbg=0
@@ -61,7 +58,6 @@ set splitbelow
 set splitright
 set colorcolumn=80
 set relativenumber
-set lazyredraw
 set mouse=
 set signcolumn=yes
 
@@ -103,14 +99,6 @@ let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_enable_on_vim_startup=1
 
-" neomake
-nnoremap <Leader>m :Neomake<CR>
-
-augroup NeomakeCommands
-    autocmd!
-    autocmd BufWritePost * Neomake
-augroup END
-
 " fugitive
 nnoremap <Leader>s :Git<CR>
 nnoremap <Leader>d :Gdiffsplit<CR>
@@ -125,17 +113,6 @@ augroup FugitiveCommands
     autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
-" vdebug
-if !exists('g:vdebug_options')
-    let g:vdebug_options = {}
-endif
-if !exists('g:vdebug_features')
-    let g:vdebug_features = {}
-endif
-let g:vdebug_options['break_on_open'] = 0
-let g:vdebug_options['continuous_mode'] = 1
-let g:vdebug_features['max_children'] = 128
-
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
@@ -146,11 +123,6 @@ let g:ctrlp_regexp = 1
 nnoremap <leader>t :TagbarToggle<CR>
 let g:tagbar_autoclose=1
 let g:tagbar_case_insensitive=1
-
-" Add any cscope database in the current directory
-if filereadable("cscope.out")
-    cs add cscope.out
-endif
 
 " local config
 if filereadable(expand("~/.vimrc.local"))
