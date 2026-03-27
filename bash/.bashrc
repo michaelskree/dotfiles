@@ -3,8 +3,29 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Set prompt
-PS1='\[\e[1;32m\]\u@\H\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+function set_prompt() {
+    [[ -r ~/.git-prompt.sh ]] && . ~/.git-prompt.sh
+
+    local blue="\[$(tput setaf 4)\]"
+    local cyan="\[$(tput setaf 6)\]"
+    local green="\[$(tput setaf 2)\]"
+    local reset="\[$(tput sgr0)\]"
+
+    PS1="${green}\u${reset}@${cyan}\H${reset}:${blue}\w${reset}"
+
+    if declare -f __git_ps1 > /dev/null 2>&1; then
+        GIT_PS1_SHOWCOLORHINTS=1
+        GIT_PS1_SHOWDIRTYSTATE=1
+        GIT_PS1_SHOWUNTRACKEDFILES=1
+        GIT_PS1_SHOWUPSTREAM=verbose
+        PS1+='$(__git_ps1)'
+    fi
+
+    PS1+="\n\$ "
+}
+
+set_prompt
+unset set_prompt
 
 # Configure bash history
 shopt -s histappend
