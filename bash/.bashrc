@@ -15,6 +15,7 @@ function set_prompt() {
 
     if declare -f __git_ps1 > /dev/null 2>&1; then
         GIT_PS1_SHOWCOLORHINTS=1
+        GIT_PS1_SHOWCONFLICTSTATE=yes
         GIT_PS1_SHOWDIRTYSTATE=1
         GIT_PS1_SHOWUNTRACKEDFILES=1
         GIT_PS1_SHOWUPSTREAM=verbose
