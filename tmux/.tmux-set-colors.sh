@@ -6,11 +6,13 @@ fg="colour12"
 
 if command -v gsettings > /dev/null 2>&1; then
     mode=$(gsettings get org.gnome.desktop.interface color-scheme)
+elif command -v defaults > /dev/null 2>&1; then
+    mode=$(defaults read -globalDomain AppleInterfaceStyle)
 else
     mode=""
 fi
 
-if [[ $mode == *"dark"* ]]; then
+if [[ $mode =~ [Dd]ark ]]; then
     bg="black"
 else
     bg="white"
